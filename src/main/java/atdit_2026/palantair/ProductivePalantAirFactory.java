@@ -7,8 +7,8 @@ import org.slf4j.LoggerFactory;
  * Concrete implementation of {@link PalantAirFactory}.
  * This factory provides a singleton instance of a WeatherOracle.
  */
-public class WeatherOracleFactoryProduction implements PalantAirFactory {
-  private static final Logger log = LoggerFactory.getLogger( WeatherOracleFactoryProduction.class );
+public class ProductivePalantAirFactory implements PalantAirFactory {
+  private static final Logger log = LoggerFactory.getLogger( ProductivePalantAirFactory.class );
 
   private static PalantAir instance;
 
@@ -20,10 +20,10 @@ public class WeatherOracleFactoryProduction implements PalantAirFactory {
    * @return a cached WeatherOracle instance.
    */
   @Override
-  public synchronized PalantAir get( ) {
+  public synchronized PalantAir getInstance( ) {
     if( instance == null ) {
-      log.debug( "WeatherOracle instance does not exist yet; creating instance ..." );
-      instance = new WeatherOracleProduction( );
+      log.debug( "PalantAir instance does not exist yet; creating instance ..." );
+      instance = new ProductivePalantAir( );
     }
     return instance;
   }

@@ -3,34 +3,20 @@ package atdit_2026.palantair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class WeatherOracleProduction implements PalantAir {
-  private static final Logger log = LoggerFactory.getLogger( WeatherOracleProduction.class );
+public class ProductivePalantAir implements PalantAir {
+  private static final Logger log = LoggerFactory.getLogger( ProductivePalantAir.class );
 
   @Override
-  public int getTemperature( ) {
+  public int getAirTemperature( ) {
     int result = 33;
-    log.info( "Forecasting temperature: {}", result );
+    log.info( "PalantAir is predicting the air temperature as {}", result );
     return result;
   }
 
   @Override
   public int getWind( ) {
     int result = 50;
-    log.info( "Forecasting wind speed: {}", result );
-    return result;
-  }
-
-  @Override
-  public int getHumidity( ) {
-    int result = 63;
-    log.info( "Forecasting humidity: {}", result );
-    return result;
-  }
-
-  @Override
-  public int getPrecipitation( ) {
-    int result = 0;
-    log.info( "Forecasting precipitation: {}", result );
+    log.info( "PalantAir is predicting the wind velocity as {}", result );
     return result;
   }
 }

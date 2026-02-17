@@ -7,11 +7,11 @@ package atdit_2026.palantair;
  * from the actual implementation, enabling easy switching between
  * different data sources (e.g., Mock, REST-API, or Database).
  */
-public interface WeatherOracleFactory {
+public interface PalantAirFactory {
 
   /**
-   * Creates and returns a {@code WeatherOracle} instance.
+   * Creates and returns a {@code PalantAir} instance.
    * @return a fully initialized {@link PalantAir} implementation.
    */
-  PalantAir get();
+  PalantAir getInstance();
 }
